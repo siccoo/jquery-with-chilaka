@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get and Set the Attr and the Image changer with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <button id="btn1">Click Attr Value</button>
+        <button id="btn2">Click/Change Width</button>
+        <button id="btn3">Click/Change Height</button><br>
+        <img id="Img" src="images/img1.jpeg" width="500px" height="500px">
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#Img').mouseenter(function(){
+                $(this).attr('src', 'images/img2.jpeg');
+            }); 
+
+            $('#Img').mouseleave(function(){
+                $(this).attr('src', 'images/img1.jpeg');
+            });
+
+            $('#btn1').click(function(){
+                // var var1 = $('#Img').attr('src');
+                // alert(var1);
+                alert($('#Img').attr('src'));
+            });
+
+            $('#btn2').click(function(){
+                $('#Img').attr('width', '600px');
+            });
+
+            $('#btn3').click(function(){
+                $('#Img').attr('height', '600px');
+            });  
+        });
+    </script>
+
+<style>
+        .main {
+            margin: 10px;
+        }
+
+        .head1 {
+            background: crimson;
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            color: #FFF;
+        }
+    </style>
+</body>
+</html>

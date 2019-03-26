@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Dimension</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <button id="btn1">Change Width</button>
+        <div id="one" class="head1">This is a square</div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                // $('#one').width(500);
+                // $('#one').height(500);
+                $('#one').text('The width of the element is: '+$('#one').outerWidth(true)+'px and the height is: '+$('#one').outerHeight(true)+'px. ');
+            });
+        });
+    </script>
+
+    <style>
+        .main{
+            margin: 10px;
+        }
+
+        .head1{
+            background: #5050e9;
+            width: 300px;
+            height: 300px;
+            color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border: 5px  solid #808080; 
+        }
+    </style>
+    
+</body>
+</html>

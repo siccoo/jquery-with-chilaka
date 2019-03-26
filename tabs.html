@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tabs on jQuery</title>
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css"> -->
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+
+<body>
+    <div id="tab">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Technology</li>
+            <li>Contact us</li>
+        </ul>
+        <div id="tab-1">
+            <p>Please I would like to throw a question I received in an interview some days back, I tried coding the algorithm
+                myself with JavaScript as demanded by the interviewers not in Java. Alice and Bob work in a beautiful orchard.
+                There are N apple trees in the orchard. The apple trees are arranged in a row and they are numbered from
+                1 to N. Alice is planning to collect all the apples from K consecutive trees and Bob is planning to collect
+                all the apples from L consecutive trees. They want to choose two disjoint segment(one consisting of K trees
+                for Alice and the other consisting of L trees for Bob) so as not to disturb each other. What is the maximum
+                number of apples that they can collect?</p>
+        </div>
+
+        <div id="tab-2">
+            <p>Please I would like to throw a question I received in an interview some days back, I tried coding the algorithm
+                myself with JavaScript as demanded by the interviewers not in Java. Alice and Bob work in a beautiful orchard.
+                There are N apple trees in the orchard. The apple trees are arranged in a row and they are numbered from
+                1 to N. Alice is planning to collect all the apples from K consecutive trees and Bob is planning to collect
+                all the apples from L consecutive trees. They want to choose two disjoint segments (one consisting of K trees
+                for Alice and the other consisting of L trees for Bob) so as not to disturb each other. What is the maximum
+                number of apples that they can collect?</p>
+        </div>
+
+        <div id="tab-3">
+            <p>Please I would like to throw a question I received in an interview some days back, I tried coding the algorithm
+                myself with JavaScript as demanded by the interviewers not in Java. Alice and Bob work in a beautiful orchard.
+                There are N apple trees in the orchard. The apple trees are arranged in a row and they are numbered from
+                1 to N. Alice is planning to collect all the apples from K consecutive trees and Bob is planning to collect
+                all the apples from L consecutive trees. They want to choose two disjoint segments (one consisting of K trees
+                for Alice and the other consisting of L trees for Bob) so as not to disturb each other. What is the maximum
+                number of apples that they can collect?</p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#tab').tabs();
+        });
+    </script>
+
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        #div1 {
+            background: #1e90ff;
+            height: 30px;
+            width: 200px;
+            border: 1px solid black;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #div3 {
+            background: #dc143c;
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+        }
+
+        #div2 {
+            background: silver;
+            height: 30px;
+            width: 200px;
+            border: 1px solid black;
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+
+
+</body>
+
+</html>

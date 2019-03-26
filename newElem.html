@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learn jQuery with Michael</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
+
+</head>
+
+<body>
+    <div class="main">
+        <button id="btn1">Add Contents</button>
+        <button id="btn3">Add Contents (Before)</button>
+        <button id="btn2">List Contents</button>
+        <button id="btn4">List Contents (Before)</button>
+        <button id="btn5">Remove Elements and Children</button>
+        <button id="btn6">Remove Children</button>
+        <button id="btn7">Before</button>
+        <button id="btn8">After</button>
+        <p id="para1"></p>
+        <ol id="ol1"></ol>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // All the jQuery code must be here
+            $('#btn1').click(function(){
+                $('#para1').append('<p>Me and Moya are true friends</p>');
+            });
+
+            $('#btn2').click(function(){
+                $('#ol1').append('<ol>Me and Moya meet online</ol>');
+            });
+
+            $('#btn3').click(function(){
+                $('#para1').prepend('<p>There friendship has grown beyound doubts</p>');
+            });
+
+            $('#btn4').click(function(){
+                $('#ol1').prepend('<ol>They are both happy to have meet themselves</ol>')
+            });
+
+            $('#btn5').click(function(){
+                $('#para1').remove();
+            });
+
+            $('#btn6').click(function(){
+                $('#ol1').empty();
+            });
+
+            $('#btn7').click(function(){
+                $('#para1').before('<p>I"m growing up</p>');
+            });
+
+            $('#btn8').click(function(){
+                $('#ol1').after('<ol>You gonna grow up</ol>');
+            })
+        });
+
+        // let label = $(this).text().trim(­) != "" ? $(this).text() : $(this).attr("href")­ != undefined && $(this).attr("href")­.trim() != "" ? $this.attr("href") : $(this).attr("alt").­trim() != "" ? $(this).attr("alt") : "Input";
+    </script>
+
+    <style>
+        .main {
+            margin: 10px;
+        }
+
+        .head2 {
+            background: blue;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</body>

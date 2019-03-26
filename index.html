@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learn jQuery with Michael</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
+
+</head>
+
+<body>
+    <div class="main">
+        <div id="1" class="head1">Click to Toggle</div>
+        <div id="2" class="head2"></div>
+    </div>
+
+    <div class="main">
+        <div id="3" class="head1">Click to Toggle</div>
+        <div id="4" class="head2"></div>
+    </div>
+
+    <div class="main">
+        <div id="5" class="head1">Click to Toggle</div>
+        <div id="6" class="head2"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // All the jQuery code must be here
+
+            $('#1').click(function () {
+                // There are various events other than the click event and they dblclick, mouseup, mousedown, mouseout, mouseleave, mouseenter etc, but the click event is the most popular for the web page.
+                $('#2').toggle();
+                // alert('The Div has been clicked');
+
+            });
+
+            $('#3').click(function () {
+
+                $('#4').fadeToggle()
+            });
+
+            $('#5').click(function () {
+
+                $('#6').slideToggle()
+            });
+        });
+
+
+    </script>
+
+    <style>
+        .main {
+            margin: 10px;
+            float: left;
+        }
+
+        .head1 {
+            background: orange;
+            width: 300px;
+            height: 50px;
+            text-align: center;
+        }
+
+        .head2 {
+            background: blue;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</body>
+
+</html>

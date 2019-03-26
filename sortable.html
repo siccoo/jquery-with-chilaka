@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sortable effects with jquery</title>
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+</head>
+
+<body>
+    <div class="main-div" id="link">
+        <div id="div1">1</div>
+        <div id="div1">2</div>
+        <div id="div1">3</div>
+        <div id="div1">4</div>
+    </div>
+
+    <div class="main-div2" id="link">
+        <div id="div2">A</div>
+        <div id="div2">B</div>
+        <div id="div2">C</div>
+        <div id="div2">D</div>
+    </div>
+
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .main-div {
+            float: left;
+            border: 1px solid silver;
+            padding: 20px;
+            margin-right: 20px;
+            width: 250px;
+        }
+
+        .main-div2 {
+            float: left;
+            border: 1px solid silver;
+            padding: 20px;
+            /* width: 250px; */
+        }
+
+        #div1 {
+            background: #1e90ff;
+            height: 30px;
+            width: 200px;
+            border: 1px solid black;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #div3 {
+            background: #dc143c;
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+        }
+
+        #div2 {
+            background: silver;
+            height: 30px;
+            width: 200px;
+            border: 1px solid black;
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('.main-div, .main-div2').sortable({
+                connectWith: '#link'
+            });
+        });
+    </script>
+
+</body>
+
+</html>

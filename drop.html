@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Droppable effects with jQuery UI</title>
+        <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    </head>
+    <body>
+        <div id="div1"></div>
+        <div id="div3"></div>
+        <div id="div2"></div>
+
+        <style>
+            body {
+                padding: 30px;
+            }
+
+            #div1 {
+                background: #1e90ff;
+                height: 150px;
+                width: 150px;
+                border: 2px solid black;
+                float: left;
+            }
+
+            #div3 {
+                background: #dc143c;
+                height: 150px;
+                width: 150px;
+                border: 2px solid black;
+                float: left;
+            }
+
+            #div2 {
+                /* background: #dc143c; */
+                height: 300px;
+                width: 300px;
+                border: 2px solid black;
+                float: right;
+            }
+
+            .dropped {
+                background: #008000;
+                color: #fff;
+                /* float: right; */
+            }
+        </style>
+
+        <script>
+            $(document).ready(function(){
+                $('#div1').draggable({
+                    revert: "valid"
+                });
+                $('#div3').draggable({
+                    revert: "invalid"
+                });
+                $('#div2').droppable({
+                    // accept: '#div1',
+                    drop: function(event, ui) {
+                        $(this).addClass('dropped').text('You Got It.');
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
