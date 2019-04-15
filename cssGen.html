@@ -4,16 +4,19 @@
 <head>
     <title>Creating a CSS Generator with jQuery</title>
     <link rel="stylesheet" href="cssGen.css">
-    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="jquery-ui.js"></script>
     <script>
         css_background = 'red';
         css_width = '100px';
+        css_height = '30px';
+        css_border_radius = '0px';
         function css_func() {
-            css_tag = ".result {background: " + css_background + "; width: " + css_width + "; height: 30px; border: #8a2be2 solid 2px;}";
+            css_tag = ".result {background: " + css_background + "; width: " + css_width + "; height: " + css_height + "; border: #8a2be2 solid 2px; border-radius: " + css_border_radius + "}";
             $('style').replaceWith('<style>' + css_tag + '</style>');
             $('#css_coding').text(css_tag);
         };
@@ -36,6 +39,36 @@
                     css_width = ui.value + "px";
                     css_func();
                 }
+            });
+
+            // Height Changer
+            $('#height_changer').slider({
+                range: 'min',
+                value: 30,
+                min: 10,
+                max: 50,
+                slider: function (event, ui) {
+                    css_height = ui.value + "px";
+                    css_func();
+                }
+            });
+
+            // Border Raduis Changer
+            $('#raduis_changer').slider({
+                range: 'min',
+                value: 0,
+                min: 0,
+                max: 10,
+                slider: function (event, ui) {
+                    css_border_radius = ui.value + "px";
+                    css_func();
+                }
+            });
+
+            $('#get_css').click(function () {
+                $('#css_coding').dialog({
+                    "title": "The Style"
+                });
             });
         });
     </script>
@@ -63,10 +96,23 @@
                     <label>Width Changer</label>
                     <div id="width_changer"></div>
                 </div>
+                <div class="form-group">
+                    <label>Height Changer</label>
+                    <div id="height_changer"></div>
+                </div>
+                <div class="form-group">
+                    <label>Border Raduis Changer</label>
+                    <div id="raduis_changer"></div>
+                </div>
             </div>
             <div class="col-md-6 blocks">
                 <div class="result"></div>
                 <div class="css_coding"></div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button class="btn btn-danger" id="get_css">Get CSS</button>
             </div>
         </div>
     </div>
