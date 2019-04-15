@@ -5,20 +5,9 @@
     background: silver;
 }
 
-.right {
+.blocks {
     padding: 50px;
-    box-sizing: border-box;
-    width: 500px;
     height: 500px;
-    float: left;
-    background: black;
-}
-
-.left {
-    width: 500px;
-    height: 500px;
-    float: left;
-
 }
 
 .element {
